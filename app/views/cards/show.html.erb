@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @card.user_id %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @card.number %>
+</p>
+
+<p>
+  <strong>Security:</strong>
+  <%= @card.security %>
+</p>
+
+<p>
+  <strong>Expiration:</strong>
+  <%= @card.expiration %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @card.name %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @card.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @card.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @card.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @card.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @card.zip %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @card.country %>
+</p>
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>

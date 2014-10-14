@@ -1,0 +1,45 @@
+<h1>Listing cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Number</th>
+      <th>Security</th>
+      <th>Expiration</th>
+      <th>Name</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Country</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.user_id %></td>
+        <td><%= card.number %></td>
+        <td><%= card.security %></td>
+        <td><%= card.expiration %></td>
+        <td><%= card.name %></td>
+        <td><%= card.address1 %></td>
+        <td><%= card.address2 %></td>
+        <td><%= card.city %></td>
+        <td><%= card.state %></td>
+        <td><%= card.zip %></td>
+        <td><%= card.country %></td>
+        <td><%= link_to 'Show', card %></td>
+        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Card', new_card_path %>
